@@ -18,5 +18,6 @@ def get_file_content(working_directory, file_path):
                 if file.read(1):
                     content += f'[... File "{file_path}" trucated at {READ_LIMIT} characters]'
                 return content
+                file.close()
     except Exception as e:
         print(f"Error: {e=}")
